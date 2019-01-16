@@ -321,7 +321,7 @@
     <!-- 添加 -->
     <string name="text_new_assets">添加資產</string>
     <string name="text_account">資產</string>
-    <string name="text_invest">投資</string>
+    <string name="text_debt">債務</string>
     <string name="text_add_assets">新建資產賬戶</string>
     <string name="text_edit_assets">修改資產賬戶</string>
     <string name="text_choose_bank">選擇銀行</string>
@@ -359,6 +359,9 @@
     <string name="text_assets_type_funding">基金</string>
     <string name="text_assets_type_stock">股票</string>
     <string name="text_assets_type_other_financial">其他理財</string>
+    <string name="text_assets_type_ant">螞蟻花唄</string>
+    <string name="text_assets_type_jd_white">京東白條</string>
+    <string name="text_assets_type_credit_card">信用卡</string>
 
     <!-- 资产详情 -->
     <string name="text_assets_detail">資產詳情</string>

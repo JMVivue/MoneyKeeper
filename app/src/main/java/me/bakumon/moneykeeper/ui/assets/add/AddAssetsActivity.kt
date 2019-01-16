@@ -110,8 +110,8 @@ class AddAssetsActivity : BaseActivity() {
         ivType.setImageResource(ResourcesUtil.getTypeImgId(this, mParamImgName))
         edtTypeName.setText(assetsName)
         edtTypeName.setSelection(edtTypeName.text.length)
-        if (type == 2) {
-            // 银行卡
+        if (type == 2 || type == 15) {
+            // 银行卡、信用卡
             ivTypeRight.visibility = View.VISIBLE
             llType.setOnClickListener { chooseBank() }
         }

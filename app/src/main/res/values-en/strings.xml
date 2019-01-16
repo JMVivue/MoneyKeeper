@@ -321,7 +321,7 @@
     <!-- 添加 -->
     <string name="text_new_assets">Add assets</string>
     <string name="text_account">assets</string>
-    <string name="text_invest">invest</string>
+    <string name="text_debt">debt</string>
     <string name="text_add_assets">Add account</string>
     <string name="text_edit_assets">Edit account</string>
     <string name="text_choose_bank">Choose bank</string>
@@ -359,6 +359,9 @@
     <string name="text_assets_type_funding">funding</string>
     <string name="text_assets_type_stock">stock</string>
     <string name="text_assets_type_other_financial">other financial</string>
+    <string name="text_assets_type_ant">蚂蚁花呗</string>
+    <string name="text_assets_type_jd_white">京东白条</string>
+    <string name="text_assets_type_credit_card">credit card</string>
 
     <!-- 资产详情 -->
     <string name="text_assets_detail">Asset details</string>

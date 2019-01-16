@@ -36,12 +36,14 @@ class AssetsListFragment : AbsListFragment() {
 
     override fun onAdapterCreated(adapter: MultiTypeAdapter) {
         adapter.register(AssetsType::class, AssetsListViewBinder())
+        adapter.register(String::class.java, AssetTypeViewBinder())
     }
 
     override fun onItemsCreated(items: Items) {
         mType = arguments?.getInt(KEY_TYPE)
         when (mType) {
             TYPE_NORMAL -> {
+                items.add("资金")
                 items.add(AssetsType(getString(R.string.text_assets_type_cash), "assets_wallet", 1))
                 items.add(AssetsType(getString(R.string.text_assets_type_bank_card), "assets_card", 2))
                 items.add(AssetsType(getString(R.string.text_assets_type_alipay), "assets_alipay", 3))
@@ -50,12 +52,18 @@ class AssetsListFragment : AbsListFragment() {
                 items.add(AssetsType(getString(R.string.text_assets_type_rice_card), "assets_rice_card", 6))
                 items.add(AssetsType(getString(R.string.text_assets_type_bus_card), "assets_bus_card", 7))
                 items.add(AssetsType(getString(R.string.text_assets_type_other), "assets_other", 8))
-            }
-            TYPE_INVEST -> {
+                items.add("投资")
                 items.add(AssetsType(getString(R.string.text_assets_type_monetary), "assets_monetary", 9))
                 items.add(AssetsType(getString(R.string.text_assets_type_funding), "assets_funding", 10))
                 items.add(AssetsType(getString(R.string.text_assets_type_stock), "assets_stock", 11))
                 items.add(AssetsType(getString(R.string.text_assets_type_other_financial), "assets_other", 12))
+                items.add("信用账户")
+                items.add(AssetsType(getString(R.string.text_assets_type_ant), "assets_ant", 13))
+                items.add(AssetsType(getString(R.string.text_assets_type_jd_white), "assets_jd_white", 14))
+                items.add(AssetsType(getString(R.string.text_assets_type_credit_card), "assets_card", 15))
+            }
+            TYPE_DEBT -> {
+
             }
         }
     }
@@ -71,9 +79,9 @@ class AssetsListFragment : AbsListFragment() {
     companion object {
         const val KEY_TYPE = "type"
         const val TYPE_NORMAL = 0
-        const val TYPE_INVEST = 1
+        const val TYPE_DEBT = 1
 
-        @IntDef(TYPE_NORMAL, TYPE_INVEST)
+        @IntDef(TYPE_NORMAL, TYPE_DEBT)
         @Retention(AnnotationRetention.SOURCE)
         annotation class AssetsTabType
 

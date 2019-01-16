@@ -37,12 +37,12 @@ class ChooseAssetsActivity : AbsTwoTabActivity() {
     }
 
     override fun getTwoTabText(): ArrayList<String> {
-        return arrayListOf(getString(R.string.text_account), getString(R.string.text_invest))
+        return arrayListOf(getString(R.string.text_account), getString(R.string.text_debt))
     }
 
     override fun getTwoFragments(): ArrayList<Fragment> {
         val outlayFragment = AssetsListFragment.newInstance(AssetsListFragment.TYPE_NORMAL)
-        val incomeFragment = AssetsListFragment.newInstance(AssetsListFragment.TYPE_INVEST)
+        val incomeFragment = AssetsListFragment.newInstance(AssetsListFragment.TYPE_DEBT)
         return arrayListOf(outlayFragment, incomeFragment)
     }
 
